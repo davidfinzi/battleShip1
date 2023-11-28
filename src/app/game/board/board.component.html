@@ -1,0 +1,16 @@
+<div class="board">
+  <div *ngFor="let row of rows; let rowIndex = index">
+    <div class="row">
+      <div *ngFor="let cell of row; let cellIndex = index"
+           (click)="handleCellClick(rowIndex, cellIndex)"
+           [ngClass]="{
+             'cell': true,
+             'empty': cell.status === 'empty',
+             'ship': cell.status === 'ship',
+             'hit': cell.status === 'hit',
+             'miss': cell.status === 'miss'
+           }">
+      </div>
+    </div>
+  </div>
+</div>

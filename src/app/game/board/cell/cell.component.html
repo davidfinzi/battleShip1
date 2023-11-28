@@ -1,0 +1,6 @@
+<div class="cell" [ngClass]="{
+    'empty': status === 'empty',
+    'occupied': status === 'ship',
+    'hit': status === 'hit',
+    'miss': status === 'miss'
+  }" (click)="onClick()"></div>
